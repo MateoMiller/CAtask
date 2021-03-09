@@ -1,0 +1,14 @@
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\task1.exe
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\task1.deps.json
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\task1.runtimeconfig.json
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\task1.runtimeconfig.dev.json
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\task1.dll
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\task1.pdb
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.csprojAssemblyReference.cache
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.AssemblyInfoInputs.cache
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.AssemblyInfo.cs
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.csproj.CoreCompileInputs.cache
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.dll
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.pdb
+C:\Users\yura8\source\repos\task1\task1\obj\Debug\netcoreapp3.1\task1.genruntimeconfig.cache
+C:\Users\yura8\source\repos\task1\task1\bin\Debug\netcoreapp3.1\in.txt
