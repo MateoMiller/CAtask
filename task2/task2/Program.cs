@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
@@ -35,7 +35,7 @@ namespace task2
             var currentNode = 1;
             queue.Enqueue(currentNode);
             prev.Add(currentNode, -1);
-            while (prev.Keys.Count != n)
+            while (prev.Keys.Count != n || queue.Count != 0)
             {
                 if (queue.Count == 0)
                 {
@@ -62,23 +62,32 @@ namespace task2
                 }
             }
             var file = new StreamWriter("out.txt");
-            file.WriteLine("N");
+            file.WriteLine("A");
             file.Flush();
         }
 
-        static void FindCycle(int firstPoint, int secondPoint ,Dictionary<int, int> prev)
+        static void FindCycle(int firstPoint, int secondPoint, Dictionary<int, int> prev)
         {
             var nodes1 = GetNodesInPath(firstPoint, prev);
             var nodes2 = GetNodesInPath(secondPoint, prev);
-            var result = nodes1
-                .Concat(nodes2)
-                .Except(nodes1.Intersect(nodes2))
-                .ToHashSet<int>();
-            result.Add(nodes1.First(x => !result.Contains(x)));
-            var file = new StreamWriter("out.txt");
-            file.WriteLine("A");
-            file.WriteLine(string.Join(' ', result.OrderBy(x => x)));
-            file.Flush();
+            for (var i = 0; i < nodes1.Count; i++)
+            {
+                for (var j = 0; j < nodes2.Count; j++)
+                {
+                    if (nodes1[i] == nodes2[j])
+                    {
+                        var result = nodes1
+                            .Take(i + 1)
+                            .Concat(nodes2.Take(j))
+                            .ToList();
+                        var file = new StreamWriter("out.txt");
+                        file.WriteLine("N");
+                        file.WriteLine(string.Join(' ', result.OrderBy(x => x)));
+                        file.Flush();
+                        return;
+                    }
+                }
+            }
         }
 
         static List<int> GetNodesInPath(int lastNode, Dictionary<int, int> prev)
